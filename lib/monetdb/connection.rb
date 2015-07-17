@@ -31,7 +31,7 @@ module MonetDB
     ENDIANNESS     = "BIG"
     LANG           = "sql"
     REPLY_SIZE     = "-1"
-    MAX_MSG_SIZE   = 32766
+    MAX_MSG_SIZE   = 16382
 
     MAPI_V8        = "8"
     MAPI_V9        = "9"
