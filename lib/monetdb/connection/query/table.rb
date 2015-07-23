@@ -38,7 +38,7 @@ module MonetDB
             case type
             when :varchar, :text, :string, :clob
               parse_string_value value
-            when :int, :smallint, :bigint, :serial, :wrd
+            when :int, :smallint, :bigint, :serial, :tinyint, :wrd
               parse_integer_value value
             when :double, :float, :real
               parse_float_value value
@@ -46,7 +46,7 @@ module MonetDB
               parse_date_value value
             when :timestamp
               parse_date_time_value value
-            when :tinyint, :boolean
+            when :boolean
               parse_boolean_value value
             else
               raise NotImplementedError, "Cannot parse value of type #{type.inspect}"
