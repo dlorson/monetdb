@@ -66,7 +66,8 @@ module MonetDB
 
         keys = {
           Q_TABLE => [:id, :rows, :columns, :returned],
-          Q_BLOCK => [:id, :columns, :remains, :offset]
+          Q_BLOCK => [:id, :columns, :remains, :offset],
+          Q_UPDATE => [:inserted, :last_id],
         }[hash[:type]]
 
         if keys
