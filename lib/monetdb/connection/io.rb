@@ -22,6 +22,7 @@ module MonetDB
 
       def read_length
         bytes = socket.recv(2).unpack("v")[0]
+        raise ConnectionError, "Server went away" if bytes.nil?
         [(bytes >> 1), (bytes & 1) == 1]
       end
 
