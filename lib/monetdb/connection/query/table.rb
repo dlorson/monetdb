@@ -76,7 +76,7 @@ module MonetDB
         end
 
         def parse_boolean_value(value)
-          value == "1"
+          value == "1" || value == "true"
         end
 
       end
